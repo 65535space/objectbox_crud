@@ -1,4 +1,4 @@
-# objectbox_demo
+# objectbox_crud
 objectboxを扱う方法
 参考文献
 https://docs.objectbox.io/tutorial-demo-project
@@ -72,4 +72,4 @@ INSERT INTO Employee (id, name) VALUES (1, 'Alice');
 INSERT INTO Project (projectId, projectName) VALUES (101, 'Project X');
 INSERT INTO Employee_Project (employeeId, projectId) VALUES (1, 101);
 ```
-# objectbox_crud
+
