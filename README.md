@@ -73,3 +73,36 @@ INSERT INTO Project (projectId, projectName) VALUES (101, 'Project X');
 INSERT INTO Employee_Project (employeeId, projectId) VALUES (1, 101);
 ```
 
+## FlutterのQ&A
+### Q: FlutterのDartではなぜ、"[プロパティ名]: [値]"のような書き方ができるのか?
+
+A: Dartの「名前付き引数」という機能によるもの
+→Dart コンストラクタ　名前付き引数　を検索
+
+名前付き引数を利用することで，コンストラクタで定義されている引数の順番と異なっていても，正しく初期化ができる．
+
+```dart
+void main() {
+  var person1 = new Person(first:'Micheal',last:'Jordan');
+
+  print(person1);
+}
+
+class Person {
+  String last;
+  String first;
+
+  Person({this.last, this.first});
+
+  toString() {
+    return '$last, $first';
+  }
+}
+```
+
+### Q. MyApp({super.key})のように、毎回クラスごとにコンストラクタがある理由
+
+A. extends したクラスのプロパティやメソッドを使用するから
+例：MyAppだとStatelessWidgetのbuildメソッドを使用している
+
+
