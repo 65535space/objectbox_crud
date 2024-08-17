@@ -84,8 +84,10 @@ class ObjectBox {
   /// few milliseconds, e.g. putting many objects, asynchronously.
   /// For this example only a single object is put which would also be fine if
   /// done using [Box.put].
-  /// フレームのドロップを回避するために、数ミリ秒以上かかる ObjectBox 操作（たとえば、多くのオブジェクトを配置する操作）を非同期で実行します。
-  /// この例では、1 つのオブジェクトだけを配置するので、[Box.put] を使用しても問題ありません。
+  /// フレームのドロップを回避するために、数ミリ秒以上かかる ObjectBox 操作（たとえば、
+  /// 多くのオブジェクトを配置する操作）を非同期で実行します。
+  /// この例では、1 つのオブジェクトだけを配置するので、[Box.put] を使用しても問題あり
+  /// ません。
   Future<void> addNote(String text) => _noteBox.putAsync(Note(text));
 
   Future<void> removeNote(int id) => _noteBox.removeAsync(id);
